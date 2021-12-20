@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/header.ejs") %>
+    <nav>
+        <a href="/">&rtrif; Home</a>
+    </nav>
+    <main>
+        <table>
+            <% if (productos.length > 0) { %>
+                <% productos.forEach(producto => { %>
+                    <tr>
+                        <td><%= producto.nombre %></td>
+                        <td><%= producto.precio %></td>
+                        <% }) %>
+                    </tr>
+            <% } %>
+        </table>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+</body>
+</html>
